@@ -1,0 +1,8 @@
+*.pyc
+*.exile.cache
+*.exile.snapshot
+.idea/
+scp/rsync.sh
+scp/scp.sh
+.DS_Store
+jars/
