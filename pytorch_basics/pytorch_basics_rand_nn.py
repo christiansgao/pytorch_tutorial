@@ -1,21 +1,12 @@
 import torch
 import torch.nn as nn
-from sklearn.datasets import load_boston
 
-boston = load_boston()
-print(boston.data.shape)
-from pandas import DataFrame
-from numpy import matrix
+### Random Numbers ###
+n_in, batch_size = 10, 12
+n_h, n_out = 5, 1
 
-n_in, n_h, n_out, batch_size = 10, 5, 1, 12
-
-#n_in, batch_size = boston.data.shape
-
-#x = torch.randn(n_in, batch_size)
-#y = torch.randn(n_in, 1)
-
-x = torch.randn(n_in, batch_size)
-y = torch.randn(n_in, 1)
+x = torch.randn(batch_size, n_in)
+y = torch.randn(batch_size, 1)
 
 model = nn.Sequential(nn.Linear(n_in, n_h), nn.ReLU(),
 nn.Linear(n_h, n_out), nn.Sigmoid())
